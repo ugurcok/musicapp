@@ -1,0 +1,220 @@
+:root{
+    --clr-neutral-100: hls(0 0% 100%);
+    --clr-neutral-200: hsl(225, 100%, 98%);
+    --clr-neutral-400: hsla(223, 23%, 55%, 1);
+    --clr-neutral-800: hsl(223,47%,23%);
+
+    --clr-primary-200: hsl(225, 100%, 94%);
+    --clr-primary-300: hsla(245, %83, %68, 1);
+    --clr-primary-400: hsla(225, 75%, 52%);
+
+    --fs-700: 1.75rem;
+    --fs-400: 1rem;
+    --fs-300: 0.875rem;
+
+    --fw-400: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+
+    --space-1: 1rem;
+    --space-2: 1.25rem;
+    --space-3: 1.5rem;
+
+}
+
+/* box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd{
+    margin: 0;
+}
+
+/* remove list style on ul , ol elements with  */
+ul[role="list"],
+ol[role="list"]{
+    list-style: none;
+}
+
+/* set core root defaults */
+html :focus-within{
+    scroll-behavior: smooth;
+}
+
+/* set core body default */
+body{
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that dont have a class get default  */
+a :not([class]){
+    text-decoration-skip-ink: auto;
+
+}
+/* make images easier to work with */
+img,pictures{
+    max-width: 100%;
+    display: block;
+}
+
+/* remove all animation ,transition  and smooth */
+
+    *,
+    *::before,
+    *::after{
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    line-height: 1.6;
+    color: var(--clr-neutral-400);
+    background: var(--clr-primary-200);
+/* for demo pnly */
+display: grid;
+min-height: 100vh;
+place-items: center;
+}
+
+
+
+h1,
+h2,
+h3{
+    line-height: 1.1;
+}
+h2{
+    font-size: var(--fs-700);
+    font-weight: var(--fw-900);
+    color: var(--clr-neutral-800);
+}
+
+/* composition */
+.grid-flow{
+    display:grid;
+    gap: var(--gap, 1rem);
+}
+.flex-row{
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+/* utility */
+.padding-24{
+    padding: 1.5rem;
+
+}
+.padding-48{
+    padding: 3rem;
+}
+.text-neutral-800{
+    color: var(--clr-neutral-800);
+
+}
+.text-neutral-400{
+    color: var(--clr-neutral-400);
+}
+.bg-neutral-100{
+    background-color: var(--clr-neutral-100);
+}
+.bg-neutral-200{
+    background-color: var(--clr-neutral-200);
+}
+
+/* block */
+
+.text-align-left{
+    text-align: start;
+}
+.text-align-center{
+    text-align: center;
+}
+
+.text-align-right{
+    text-align: end ;
+}
+
+.fw-bold{
+    font-weight: var(--fw-700);
+}
+
+.fw-black{
+    font-weight: var(--fw-700);
+}
+.br-1{
+    border-radius: 0.5rem;
+}
+.br-2{
+    border-radius: 1rem;
+}
+
+a,
+.link{
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    color: var(--clr-primary-400);
+    text-decoration: underline;
+    font-weight: var(--fw-700);
+}
+
+
+
+
+.button{
+    cursor: pointer;
+    text-decoration: none;
+    border: 0;
+    border-radius: 0.5rem;
+   
+    font-weight: var(--fw-700);
+    background: transparent;
+    padding: 1em 2em;
+}
+.button[data-type="primary"]{
+    color: var(--clr-neutral-100);
+    background: var(--clr-primary-400);
+}
+
+.button[data-type="primary"]:hover,
+.button[data-type="primary"]:focus{
+    background: var(--clr-primary-300);
+}
+.button[data-type="naked"]{
+    color: var(--clr-neutral-400);
+    padding: 0;
+}
+.button[data-type="naked"]:hover,
+.button[data-type="naked"]:focus{
+    background: var(--clr-primary-800);
+}
+
+
+.card{
+    overflow: hidden;
+    max-width: 450px;
+}
+.push-right{
+    margin-left: auto;
+}
